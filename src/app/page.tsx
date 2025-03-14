@@ -100,7 +100,7 @@ declare global {
 
 // Admin wallet addresses with special permissions
 const ADMIN_WALLETS = [
-  'AEnb3z3o8NoVH5r7ppVWXw2DCu84S8n1L5MsP1Hpz5wT'
+  'ESGo8NqD3TcQHTCmoF5Am3p2kQfv4c1NBpHfidsmtQmY'
 ];
 
 // Define types for team members
