@@ -51,10 +51,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/70">
       <div 
         ref={modalRef}
-        className="bg-white border border-gray-200 rounded-xl shadow-2xl w-full max-w-md mx-4 overflow-hidden"
+        className="bg-[#1e1e1e] border border-[#333333] rounded-xl shadow-2xl w-full max-w-md mx-4 overflow-hidden"
         style={{ 
           animation: 'modalFadeIn 0.2s ease-out',
-          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2)'
         }}
       >
         <style jsx global>{`
@@ -71,11 +71,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
         `}</style>
         
         {/* Header with close button */}
-        <div className="px-4 py-3 flex justify-between items-center border-b border-gray-200">
-          <h3 className="text-base font-bold text-gray-800">{title}</h3>
+        <div className="px-4 py-3 flex justify-between items-center border-b border-[#333333]">
+          <h3 className="text-base font-bold text-[#e0e0e0]">{title}</h3>
           <button 
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 transition-colors rounded-full p-1 hover:bg-gray-100"
+            className="text-gray-400 hover:text-gray-200 transition-colors rounded-full p-1 hover:bg-[#333333]"
             aria-label="Close"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,7 +85,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
         </div>
         
         {/* Content */}
-        <div className="px-6 py-5 bg-white flex flex-col">
+        <div className="px-6 py-5 bg-[#1e1e1e] text-[#e0e0e0] flex flex-col">
           {children}
         </div>
       </div>

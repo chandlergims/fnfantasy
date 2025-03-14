@@ -214,7 +214,7 @@ const TeamsPage = () => {
   const pendingInvitesCount = invites.length;
 
   return (
-    <div className="w-full min-h-screen bg-gray-50 flex flex-col">
+    <div className="w-full min-h-screen bg-[#121212] flex flex-col">
       {error && (
         <div className="bg-red-900/30 border border-red-800 text-red-300 px-4 py-3 rounded-md mx-4 mt-4">
           <p className="text-sm font-bold">{error}</p>
@@ -226,9 +226,9 @@ const TeamsPage = () => {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#f0b90b]"></div>
         </div>
       ) : (
-        <div className="bg-white shadow-md flex-1">
+        <div className="bg-[#1e1e1e] shadow-md flex-1">
           {/* Tabs */}
-          <div className="flex border-b border-gray-200 bg-white">
+          <div className="flex border-b border-[#333333] bg-[#1e1e1e]">
             <button
               onClick={() => setActiveTab('created')}
               className={`flex items-center px-6 py-4 text-sm font-bold ${
@@ -241,7 +241,7 @@ const TeamsPage = () => {
                 <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
               </svg>
               My Teams
-              <span className="ml-2 bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs font-bold">
+              <span className="ml-2 bg-[#2a2a2a] text-gray-300 px-2 py-0.5 rounded-full text-xs font-bold">
                 {myCreatedTeams.length}/5
               </span>
             </button>
@@ -258,7 +258,7 @@ const TeamsPage = () => {
                 <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
               </svg>
               Joined Teams
-              <span className="ml-2 bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs font-bold">
+              <span className="ml-2 bg-[#2a2a2a] text-gray-300 px-2 py-0.5 rounded-full text-xs font-bold">
                 {teamsImIn.length}
               </span>
             </button>
@@ -310,12 +310,12 @@ const TeamsPage = () => {
                     ))}
                   </div>
                 ) : (
-                  <div className="bg-gray-50 p-8 text-center border border-gray-200 rounded-lg">
+                  <div className="bg-[#2a2a2a] p-8 text-center border border-[#333333] rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">No Teams Created</h3>
-                    <p className="text-gray-600 mb-6 font-bold">You haven't created any teams yet</p>
+                    <h3 className="text-xl font-bold text-gray-200 mb-2">No Teams Created</h3>
+                    <p className="text-gray-400 mb-6 font-bold">You haven't created any teams yet</p>
                     <button 
                       onClick={() => router.push('/')}
                       className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-[#f0b90b] hover:bg-[#e5b00a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f0b90b]"
@@ -339,12 +339,12 @@ const TeamsPage = () => {
                     ))}
                   </div>
                 ) : (
-                  <div className="bg-gray-50 p-8 text-center border border-gray-200 rounded-lg">
+                  <div className="bg-[#2a2a2a] p-8 text-center border border-[#333333] rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">No Teams Joined</h3>
-                    <p className="text-gray-600 font-bold">You haven't joined any teams yet</p>
+                    <h3 className="text-xl font-bold text-gray-200 mb-2">No Teams Joined</h3>
+                    <p className="text-gray-400 font-bold">You haven't joined any teams yet</p>
                   </div>
                 )}
               </div>
@@ -356,7 +356,7 @@ const TeamsPage = () => {
                 {invites.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {invites.map(invite => (
-                      <div key={invite._id} className="bg-white p-6 rounded-lg border border-neutral-200 shadow hover:border-[#f0b90b] transition-all duration-300">
+                      <div key={invite._id} className="bg-[#1e1e1e] p-6 rounded-lg border border-[#333333] shadow hover:border-[#f0b90b] transition-all duration-300">
                         <div className="flex items-center mb-4">
                           <div className="w-12 h-12 rounded-full bg-[#f0b90b]/20 flex items-center justify-center mr-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#f0b90b]" viewBox="0 0 20 20" fill="currentColor">
@@ -364,11 +364,11 @@ const TeamsPage = () => {
                             </svg>
                           </div>
                           <div>
-                            <h3 className="text-lg font-bold text-gray-900">{invite.teamName}</h3>
-                            <p className="text-sm text-gray-500 font-bold">Team Invitation</p>
+                            <h3 className="text-lg font-bold text-gray-200">{invite.teamName}</h3>
+                            <p className="text-sm text-gray-400 font-bold">Team Invitation</p>
                           </div>
                         </div>
-                        <p className="text-gray-600 text-sm mb-4 font-bold">You've been invited to join this team</p>
+                        <p className="text-gray-400 text-sm mb-4 font-bold">You've been invited to join this team</p>
                         <div className="flex space-x-3">
                           <button
                             onClick={() => handleInviteResponse(invite._id, 'accepted')}
@@ -380,7 +380,7 @@ const TeamsPage = () => {
                           <button
                             onClick={() => handleInviteResponse(invite._id, 'rejected')}
                             disabled={isProcessingInvite}
-                            className="flex-1 px-4 py-2 bg-gray-200 text-gray-800 text-sm rounded-md hover:bg-gray-300 transition-colors font-bold"
+                            className="flex-1 px-4 py-2 bg-[#333333] text-gray-200 text-sm rounded-md hover:bg-[#444444] transition-colors font-bold"
                           >
                             Decline
                           </button>
@@ -389,12 +389,12 @@ const TeamsPage = () => {
                     ))}
                   </div>
                 ) : (
-                  <div className="bg-gray-50 p-8 text-center border border-gray-200 rounded-lg">
+                  <div className="bg-[#2a2a2a] p-8 text-center border border-[#333333] rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">No Invites</h3>
-                    <p className="text-gray-600 font-bold">You don't have any team invitations</p>
+                    <h3 className="text-xl font-bold text-gray-200 mb-2">No Invites</h3>
+                    <p className="text-gray-400 font-bold">You don't have any team invitations</p>
                   </div>
                 )}
               </div>
@@ -411,37 +411,37 @@ const TeamsPage = () => {
       >
         <div className="p-6">
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="w-12 h-12 rounded-full bg-red-900/30 flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
               </svg>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-gray-900">Confirm Deletion</h3>
-              <p className="text-sm text-gray-500">This action cannot be undone</p>
+              <h3 className="text-lg font-bold text-gray-200">Confirm Deletion</h3>
+              <p className="text-sm text-gray-400">This action cannot be undone</p>
             </div>
           </div>
           
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
-            <p className="text-gray-700 font-bold mb-2">You are about to delete:</p>
+          <div className="bg-[#2a2a2a] border border-[#333333] rounded-lg p-4 mb-6">
+            <p className="text-gray-300 font-bold mb-2">You are about to delete:</p>
             <div className="flex items-center">
               <div className="w-8 h-8 bg-[#f0b90b]/20 rounded-full flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#f0b90b]" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                 </svg>
               </div>
-              <span className="text-gray-900 font-bold">{teamToDelete?.name}</span>
+              <span className="text-gray-200 font-bold">{teamToDelete?.name}</span>
             </div>
           </div>
           
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-300 mb-6">
             Deleting this team will remove all associated data, including member information and tournament registrations.
           </p>
           
-          <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200">
+          <div className="flex justify-end space-x-3 pt-4 border-t border-[#333333]">
             <button
               type="button"
-              className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-gray-100 border border-gray-300 text-gray-700 h-8 text-sm justify-center"
+              className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-[#333333] border border-[#444444] text-gray-300 h-8 text-sm justify-center"
               onClick={() => setIsDeleteModalOpen(false)}
               disabled={isDeleting}
               style={{ fontFamily: 'var(--font-dm-mono)' }}

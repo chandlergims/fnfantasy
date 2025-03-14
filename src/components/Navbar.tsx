@@ -58,7 +58,7 @@ const Navbar = ({
         {/* Logo - Far Left */}
         <div className="flex-none">
           <Link href="/" className={styles.logo}>
-            <img src="/logo.png" alt="FantasyFNF Logo" className="h-8" />
+            <span className="text-[#f0b90b] font-bold text-xl tracking-tight" style={{ fontFamily: 'var(--font-geist-mono)' }}>BracketWars</span>
           </Link>
         </div>
         
@@ -85,7 +85,7 @@ const Navbar = ({
                 Docs
               </Link>
               <Link 
-                href="https://x.com/FantasyFNF" 
+                href="https://x.com/BracketWarsFun" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.navLink} text-sm px-4 py-2 whitespace-nowrap`}
@@ -119,7 +119,7 @@ const Navbar = ({
                   
                   {/* Dropdown Menu */}
                   {showUserDropdown && (
-                    <div className="absolute right-0 mt-2 min-w-48 rounded-lg overflow-hidden border border-gray-200 bg-white p-1 text-gray-800 shadow-md z-50" style={{ fontFamily: 'var(--font-dm-mono)' }}>
+                    <div className="absolute right-0 mt-2 min-w-48 rounded-lg overflow-hidden border border-[#333333] bg-[#1e1e1e] p-1 text-gray-200 shadow-md z-50" style={{ fontFamily: 'var(--font-dm-mono)' }}>
                       {/* Wallet Address Header */}
                       <div className="p-2">
                         <div className="flex items-center gap-2">
@@ -132,7 +132,7 @@ const Navbar = ({
                       </div>
                       
                       {/* Separator */}
-                      <div className="-mx-1 my-1 h-px bg-gray-200"></div>
+                      <div className="-mx-1 my-1 h-px bg-[#333333]"></div>
                       
                       {/* Logout Option */}
                       <div className="p-2">

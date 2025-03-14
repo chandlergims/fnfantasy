@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FantasyFNF",
-  description: "Your ultimate fantasy football experience",
+  title: "BracketWars",
+  description: "Your ultimate fantasy trading competition platform",
   icons: {
     icon: [
       {
@@ -42,7 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavbarContainer />
-        <main className="min-h-screen" style={{ background: '#ffffff' }}>
+        <main className="min-h-screen" style={{ background: 'var(--background)' }}>
           {children}
         </main>
       </body>

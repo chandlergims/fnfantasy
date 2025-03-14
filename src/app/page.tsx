@@ -506,7 +506,7 @@ export default function Home() {
         {/* Teams Section */}
         <div className="mb-12">
           <div className="mb-6 flex justify-between items-center">
-            <div className="rounded-md border border-neutral-200 bg-white text-neutral-950 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
+            <div className="rounded-md border border-[#333333] bg-[#1e1e1e] text-gray-200 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                   <p className="text-sm font-bold">Registered Teams</p>
@@ -518,7 +518,7 @@ export default function Home() {
             </div>
             
             {/* Cash Prize */}
-            <div className="rounded-md border border-neutral-200 bg-white text-neutral-950 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
+            <div className="rounded-md border border-[#333333] bg-[#1e1e1e] text-gray-200 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                   <p className="text-sm font-bold">Cash Prize</p>
@@ -530,7 +530,7 @@ export default function Home() {
             </div>
             
             {/* Next Tournament */}
-            <div className="rounded-md border border-neutral-200 bg-white text-neutral-950 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
+            <div className="rounded-md border border-[#333333] bg-[#1e1e1e] text-gray-200 shadow px-4 py-3 flex flex-col gap-1 hover:border-[#f0b90b] transition-all duration-300">
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                   <p className="text-sm font-bold">Next Tournament</p>
@@ -545,12 +545,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Partnership Logos */}
-          <div className="flex items-center justify-center mb-6 space-x-3">
-            <img src="/cielo.png" alt="Cielo" className="h-6" />
-            <span className="text-gray-400">×</span>
-            <img src="/logo.png" alt="FantasyFNF" className="h-12" />
-          </div>
+          {/* Partnership section removed */}
           
           <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-4">
             {/* Search Input */}
@@ -562,8 +557,8 @@ export default function Home() {
               </div>
               <input
                 type="text"
-                className="block w-full p-2 pl-10 pr-10 text-sm text-gray-900 border border-[#f0b90b]/30 rounded-lg bg-white focus:outline-none"
-                placeholder="Search FantasyFNF teams..."
+                className="block w-full p-2 pl-10 pr-10 text-sm text-gray-200 border border-[#f0b90b]/30 rounded-lg bg-[#2a2a2a] focus:outline-none"
+                placeholder="Search BracketWars ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -593,7 +588,7 @@ export default function Home() {
               className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-[#f0b90b]/10 border border-[#f0b90b] text-[#f0b90b] h-8 text-sm justify-center cursor-pointer w-full md:w-auto font-bold"
               style={{ fontFamily: 'var(--font-dm-mono)' }}
             >
-              <span>Create FantasyFNF</span>
+              <span>Create BracketWars</span>
             </button>
           </div>
           
@@ -614,20 +609,20 @@ export default function Home() {
                   />
                 ))}
                 {teams.length === 0 && (
-                  <div className="col-span-5 text-center py-10 bg-gray-50 rounded-lg border border-gray-200">
+                  <div className="col-span-5 text-center py-10 bg-[#1e1e1e] rounded-lg border border-[#333333]">
                     {searchQuery ? (
                       <div>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <p className="text-gray-500">No teams found matching "<span className="font-medium">{searchQuery}</span>"</p>
+                        <p className="text-gray-400">No teams found matching "<span className="font-medium">{searchQuery}</span>"</p>
                       </div>
                     ) : (
                       <div>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                         </svg>
-                        <p className="text-gray-500">No teams created yet</p>
+                        <p className="text-gray-400">No teams created yet</p>
                       </div>
                     )}
                   </div>
@@ -648,10 +643,10 @@ export default function Home() {
         {/* Login Modal is now handled by NavbarContainer */}
         
         {/* Create Team Modal */}
-        <Modal isOpen={isModalOpen} onClose={closeModal} title="Create New FantasyFNF Team">
+        <Modal isOpen={isModalOpen} onClose={closeModal} title="Create New BracketWars Team">
           <form onSubmit={handleCreateTeam} className="space-y-6">
             {/* Banner Preview */}
-            <div className="relative h-32 rounded-lg overflow-hidden bg-white border border-gray-300">
+            <div className="relative h-32 rounded-lg overflow-hidden bg-[#2a2a2a] border border-[#444444]">
               {bannerImage && (
                 <img 
                   src={URL.createObjectURL(bannerImage)} 
@@ -681,14 +676,14 @@ export default function Home() {
               {/* Left Column - Team Info */}
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="teamName" className="block text-sm font-bold text-gray-700 mb-1">
+                  <label htmlFor="teamName" className="block text-sm font-bold text-gray-300 mb-1">
                     Team Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="teamName"
                     type="text"
                     placeholder="Enter team name"
-                    className="w-full p-2.5 bg-white border border-gray-300 rounded text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
+                    className="w-full p-2.5 bg-[#1e1e1e] border border-[#444444] rounded text-gray-200 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
                     value={newTeamName}
                     onChange={(e) => setNewTeamName(e.target.value)}
                     required
@@ -696,14 +691,14 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <label htmlFor="twitterLink" className="block text-sm font-bold text-gray-700 mb-1">
+                  <label htmlFor="twitterLink" className="block text-sm font-bold text-gray-300 mb-1">
                     Twitter @ <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="twitterLink"
                     type="text"
                     placeholder="Username"
-                    className="w-full p-2.5 bg-white border border-gray-300 rounded text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
+                    className="w-full p-2.5 bg-[#1e1e1e] border border-[#444444] rounded text-gray-200 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
                     value={twitterLink.replace('https://x.com/', '')}
                     onChange={(e) => {
                       // Store just the username, but with the full URL for the href
@@ -712,18 +707,18 @@ export default function Home() {
                     }}
                     required
                   />
-                  <p className="text-xs font-bold text-gray-600 mt-1">Enter username without @</p>
+                  <p className="text-xs font-bold text-gray-400 mt-1">Enter username without @</p>
                 </div>
                 
                 <div>
-                  <label htmlFor="bannerImage" className="block text-sm font-bold text-gray-700 mb-1">
+                  <label htmlFor="bannerImage" className="block text-sm font-bold text-gray-300 mb-1">
                     Banner Image <span className="text-red-500">*</span>
                   </label>
                   <input
                     id="bannerImage"
                     type="file"
                     accept="image/*"
-                    className="w-full p-2 bg-white border border-gray-300 rounded text-gray-800 file:mr-4 file:py-1 file:px-4 file:rounded file:border file:border-[#f0b90b] file:text-[#f0b90b] file:bg-transparent hover:file:bg-[#f0b90b]/10 cursor-pointer"
+                    className="w-full p-2 bg-[#1e1e1e] border border-[#444444] rounded text-gray-200 file:mr-4 file:py-1 file:px-4 file:rounded file:border file:border-[#f0b90b] file:text-[#f0b90b] file:bg-transparent hover:file:bg-[#f0b90b]/10 cursor-pointer"
                     onChange={(e) => {
                       if (e.target.files && e.target.files[0]) {
                         setBannerImage(e.target.files[0]);
@@ -731,13 +726,13 @@ export default function Home() {
                     }}
                     required
                   />
-                  <p className="text-xs font-bold text-gray-600 mt-1">Recommended size: 1200 x 400 pixels</p>
+                  <p className="text-xs font-bold text-gray-400 mt-1">Recommended size: 1200 x 400 pixels</p>
                 </div>
               </div>
               
               {/* Right Column - Team Members */}
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-1">
+                <label className="block text-sm font-bold text-gray-300 mb-1">
                   Solana Wallet Addresses <span className="text-red-500">*</span>
                 </label>
                 <div className="space-y-2 max-h-[200px] overflow-y-auto pr-2 custom-scrollbar">
@@ -747,7 +742,7 @@ export default function Home() {
                         <input
                           type="text"
                           placeholder="Enter Solana wallet address"
-                          className={`flex-1 p-2.5 bg-white border ${walletErrors[index] ? 'border-red-500' : 'border-gray-300'} rounded text-gray-800 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b] text-xs`}
+                          className={`flex-1 p-2.5 bg-[#1e1e1e] border ${walletErrors[index] ? 'border-red-500' : 'border-[#444444]'} rounded text-gray-200 focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b] text-xs`}
                           value={address}
                           onChange={(e) => updateWalletAddress(index, e.target.value)}
                           required={index < 5}
@@ -807,11 +802,11 @@ export default function Home() {
             )}
             
             {/* Form Actions */}
-            <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200 mt-2">
+            <div className="flex justify-end space-x-3 pt-4 border-t border-[#333333] mt-2">
               <button
                 type="button"
                 onClick={closeModal}
-                className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-gray-100 border border-gray-300 text-gray-700 h-8 text-sm justify-center"
+                className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-[#333333] border border-[#444444] text-gray-300 h-8 text-sm justify-center"
                 style={{ fontFamily: 'var(--font-dm-mono)' }}
               >
                 <span className="font-bold">Cancel</span>

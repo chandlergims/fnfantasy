@@ -218,16 +218,16 @@ const generateMatches = (teams: string[] = []) => {
   ];
 };
 
-// Create a light theme
-const lightTheme = createTheme({
-  textColor: { main: '#333', highlighted: '#000', dark: '#666' },
-  matchBackground: { wonColor: '#f8f8f8', lostColor: '#f8f8f8' }, // Same color for both won and lost
-  score: { background: { wonColor: '#f8f8f8', lostColor: '#f8f8f8' } }, // Same color for both won and lost
-  border: { color: '#ddd', highlightedColor: '#aaa' },
+// Create a dark theme
+const darkTheme = createTheme({
+  textColor: { main: '#e0e0e0', highlighted: '#ffffff', dark: '#a0a0a0' },
+  matchBackground: { wonColor: '#2a2a2a', lostColor: '#2a2a2a' }, // Same color for both won and lost
+  score: { background: { wonColor: '#2a2a2a', lostColor: '#2a2a2a' } }, // Same color for both won and lost
+  border: { color: '#333333', highlightedColor: '#444444' },
   roundHeader: { backgroundColor: '#f0b90b', color: '#FFF' },
-  connectorColor: '#ccc',
-  connectorColorHighlight: '#999',
-  svgBackground: '#ffffff'
+  connectorColor: '#444444',
+  connectorColorHighlight: '#666666',
+  svgBackground: '#121212'
 });
 
 const TournamentBracket: React.FC<TournamentBracketProps> = ({ 
@@ -346,13 +346,13 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
       <div className="mb-8 text-center">
         {isEventsPage ? (
           <>
-            <h2 className="text-2xl font-semibold text-gray-800">Tournament {tournamentNumber}</h2>
-            <p className="text-gray-600 text-sm mt-1">Current Tournament: {tournamentDate}</p>
+            <h2 className="text-2xl font-semibold text-gray-200">Tournament {tournamentNumber}</h2>
+            <p className="text-gray-400 text-sm mt-1">Current Tournament: {tournamentDate}</p>
           </>
         ) : (
           <>
-            <h2 className="text-2xl font-semibold text-gray-800">Tournament 1</h2>
-            <p className="text-gray-600 text-sm mt-1">Current Tournament: {formattedDate}</p>
+            <h2 className="text-2xl font-semibold text-gray-200">Tournament 1</h2>
+            <p className="text-gray-400 text-sm mt-1">Current Tournament: {formattedDate}</p>
           </>
         )}
       </div>
@@ -373,13 +373,13 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
       {/* Participants Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] overflow-auto">
+          <div className="bg-[#1e1e1e] rounded-lg shadow-lg w-full max-w-4xl max-h-[90vh] overflow-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-semibold text-gray-800">Edit Tournament Participants</h2>
+                <h2 className="text-2xl font-semibold text-gray-200">Edit Tournament Participants</h2>
                 <button
                   onClick={closeModal}
-                  className="text-gray-500 hover:text-gray-700"
+                  className="text-gray-400 hover:text-gray-200"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -388,17 +388,17 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
               </div>
               
               {/* Team Name Editor */}
-              <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="mb-6 p-4 bg-[#2a2a2a] rounded-lg border border-[#333333]">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {Array.from({ length: 10 }).map((_, index) => (
                     <div key={index} className="flex flex-col">
-                      <label className="text-sm font-medium text-gray-700 mb-1">Team {index + 1}</label>
+                      <label className="text-sm font-medium text-gray-300 mb-1">Team {index + 1}</label>
                       <div className="flex">
                         <input
                           type="text"
                           value={teamNames[index] || ''}
                           onChange={(e) => handleTeamNameChange(index, e.target.value)}
-                          className="flex-1 p-2 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
+                          className="flex-1 p-2 border border-[#444444] bg-[#1e1e1e] text-gray-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-[#f0b90b] focus:border-[#f0b90b]"
                           placeholder={`Team ${index + 1}`}
                         />
                       </div>
@@ -420,11 +420,11 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
               )}
               
               {/* Modal Actions */}
-              <div className="flex justify-end space-x-3 pt-4 border-t border-gray-200 mt-2">
+              <div className="flex justify-end space-x-3 pt-4 border-t border-[#333333] mt-2">
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-gray-100 border border-gray-300 text-gray-700 h-8 text-sm justify-center"
+                  className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-[#333333] border border-[#444444] text-gray-300 h-8 text-sm justify-center"
                   style={{ fontFamily: 'var(--font-dm-mono)' }}
                   disabled={isLoading}
                 >
@@ -453,20 +453,20 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
       )}
       
       <div className={styles.bracketContainer}>
-        <div className={styles.bracketWrapper + " border border-gray-200 rounded-lg"}>
+        <div className={styles.bracketWrapper + " border border-[#333333] rounded-lg"}>
           <SingleEliminationBracket
             matches={matches}
             matchComponent={Match}
-            theme={lightTheme}
+            theme={darkTheme}
             options={{
               style: {
                 roundHeader: {
-                  backgroundColor: lightTheme.roundHeader.backgroundColor,
-                  color: lightTheme.roundHeader.color,
+                  backgroundColor: darkTheme.roundHeader.backgroundColor,
+                  color: darkTheme.roundHeader.color,
                   fontWeight: 'bold',
                 },
-                connectorColor: lightTheme.connectorColor,
-                connectorColorHighlight: lightTheme.connectorColorHighlight,
+                connectorColor: darkTheme.connectorColor,
+                connectorColorHighlight: darkTheme.connectorColorHighlight,
               }
             }}
           svgWrapper={({ children }: { children: React.ReactNode }) => (
@@ -475,7 +475,7 @@ const TournamentBracket: React.FC<TournamentBracketProps> = ({
                 width="100%"
                 height="800"
                 viewBox="0 0 1600 800"
-                style={{ background: lightTheme.svgBackground }}
+                style={{ background: darkTheme.svgBackground }}
               >
                 {children}
               </svg>

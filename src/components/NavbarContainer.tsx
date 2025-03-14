@@ -201,25 +201,25 @@ const NavbarContainer = () => {
       {/* Login Modal */}
       <Modal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} title="Connect Wallet">
         <div className="w-full">
-          <p className="text-center text-gray-700 text-sm mb-6">
-            Connect your wallet to create and manage your FantasyFNF teams
+          <p className="text-center text-gray-300 text-sm mb-6">
+            Connect your wallet to create and manage your BracketWars teams
           </p>
           
           {/* Phantom Wallet Button */}
           <button
             onClick={connectPhantomWallet}
-            className="w-full flex items-center justify-between p-3 bg-white hover:bg-gray-50 border border-gray-300 rounded-lg transition-colors"
+            className="w-full flex items-center justify-between p-3 bg-[#2a2a2a] hover:bg-[#333333] border border-[#444444] rounded-lg transition-colors"
           >
             <div className="flex items-center">
               <div className="w-8 h-8 mr-3 rounded-full overflow-hidden flex items-center justify-center">
                 <img src="/phantom.png" alt="Phantom Wallet" className="w-full h-full object-cover" />
               </div>
-              <span className="text-gray-800 text-sm">Phantom Wallet</span>
+              <span className="text-gray-200 text-sm">Phantom Wallet</span>
             </div>
             <span className="bg-[#f0b90b] text-xs text-white px-2 py-1 rounded">Connect</span>
           </button>
           
-          <div className="text-center text-xs text-gray-500 mt-6">
+          <div className="text-center text-xs text-gray-400 mt-6">
             <p>Don't have Phantom wallet?</p>
             <a 
               href="https://phantom.app/" 

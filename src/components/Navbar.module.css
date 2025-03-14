@@ -1,17 +1,17 @@
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(18, 18, 18, 0.95);
   padding: 0.6rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
 .navbar:hover {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -24,7 +24,7 @@
 }
 
 .logo {
-  color: #333333;
+  color: #e0e0e0;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
@@ -72,7 +72,7 @@
 
 .navLink {
   position: relative;
-  color: #555555;
+  color: #a0a0a0;
   transition: color 0.3s ease;
   font-weight: 700;
 }
