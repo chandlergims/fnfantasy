@@ -58,7 +58,7 @@ const Navbar = ({
         {/* Logo - Far Left */}
         <div className="flex-none">
           <Link href="/" className={styles.logo}>
-            <span className="text-[#f0b90b] font-bold text-xl tracking-tight" style={{ fontFamily: 'var(--font-geist-mono)' }}>BracketWars</span>
+            <span className="text-[#f0b90b] font-bold text-xl tracking-tight" style={{ fontFamily: 'var(--font-geist-mono)' }}>BracketWarz</span>
           </Link>
         </div>
         
@@ -85,7 +85,7 @@ const Navbar = ({
                 Docs
               </Link>
               <Link 
-                href="https://x.com/BracketWarsFun" 
+                href="https://x.com/BracketWarzFun" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.navLink} text-sm px-4 py-2 whitespace-nowrap`}

@@ -202,7 +202,7 @@ const NavbarContainer = () => {
       <Modal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} title="Connect Wallet">
         <div className="w-full">
           <p className="text-center text-gray-300 text-sm mb-6">
-            Connect your wallet to create and manage your BracketWars teams
+            Connect your wallet to create and manage your BracketWarz teams
           </p>
           
           {/* Phantom Wallet Button */}

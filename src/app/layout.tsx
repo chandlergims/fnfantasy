@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BracketWars",
+  title: "BracketWarz",
   description: "Your ultimate fantasy trading competition platform",
   icons: {
     icon: [

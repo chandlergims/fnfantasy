@@ -558,7 +558,7 @@ export default function Home() {
               <input
                 type="text"
                 className="block w-full p-2 pl-10 pr-10 text-sm text-gray-200 border border-[#f0b90b]/30 rounded-lg bg-[#2a2a2a] focus:outline-none"
-                placeholder="Search BracketWars ..."
+                placeholder="Search BracketWarz ..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -588,7 +588,7 @@ export default function Home() {
               className="flex items-center overflow-hidden rounded-md p-2 text-left outline-none transition-all duration-300 ease-in-out hover:bg-[#f0b90b]/10 border border-[#f0b90b] text-[#f0b90b] h-8 text-sm justify-center cursor-pointer w-full md:w-auto font-bold"
               style={{ fontFamily: 'var(--font-dm-mono)' }}
             >
-              <span>Create BracketWars</span>
+              <span>Create BracketWarz</span>
             </button>
           </div>
           
@@ -643,7 +643,7 @@ export default function Home() {
         {/* Login Modal is now handled by NavbarContainer */}
         
         {/* Create Team Modal */}
-        <Modal isOpen={isModalOpen} onClose={closeModal} title="Create New BracketWars Team">
+        <Modal isOpen={isModalOpen} onClose={closeModal} title="Create New BracketWarz Team">
           <form onSubmit={handleCreateTeam} className="space-y-6">
             {/* Banner Preview */}
             <div className="relative h-32 rounded-lg overflow-hidden bg-[#2a2a2a] border border-[#444444]">

@@ -10,17 +10,17 @@ export default function DocsPage() {
       case 'overview':
         return (
           <div>
-            <h1 className="text-4xl font-bold mb-6 text-gray-200">BracketWars Overview</h1>
-            <div className="text-gray-400 text-base mb-8">The definitive guide to the BracketWars platform</div>
+            <h1 className="text-4xl font-bold mb-6 text-gray-200">BracketWarz Overview</h1>
+            <div className="text-gray-400 text-base mb-8">The definitive guide to the BracketWarz platform</div>
             
             <div className="prose max-w-none">
               <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-                BracketWars is a sophisticated competitive trading platform that leverages the concept of traditional fantasy sports leagues, applying it to financial trading performance metrics rather than athletic statistics.
+                BracketWarz is a sophisticated competitive trading platform that leverages the concept of traditional fantasy sports leagues, applying it to financial trading performance metrics rather than athletic statistics.
               </p>
               
               <div className="bg-[#f0b90b]/10 p-6 rounded-lg border-l-4 border-[#f0b90b] my-8">
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  Participants establish teams (designated as BracketWars teams) comprising 5-10 members. These teams engage in competitive tournaments where performance is evaluated based on trading metrics. The Cielo Finance API provides comprehensive tracking of each member&apos;s PnL (Profit and Loss), with the aggregated performance determining tournament advancement and ultimate victory.
+                  Participants establish teams (designated as BracketWarz teams) comprising 5-10 members. These teams engage in competitive tournaments where performance is evaluated based on trading metrics. The Cielo Finance API provides comprehensive tracking of each member&apos;s PnL (Profit and Loss), with the aggregated performance determining tournament advancement and ultimate victory.
                 </p>
               </div>
               
@@ -56,12 +56,12 @@ export default function DocsPage() {
         return (
           <div>
             <h1 className="text-4xl font-bold mb-6 text-gray-200">Team Management</h1>
-            <div className="text-gray-400 text-base mb-8">Comprehensive guide to creating, joining, and managing BracketWars teams</div>
+            <div className="text-gray-400 text-base mb-8">Comprehensive guide to creating, joining, and managing BracketWarz teams</div>
             
             <div className="prose max-w-none">
               <h2 className="text-3xl font-semibold mt-10 mb-6 text-gray-200">Creating a Team</h2>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                To create a BracketWars team, click the &quot;Create BracketWars&quot; button on the home page. You&apos;ll need to provide:
+                To create a BracketWarz team, click the &quot;Create BracketWarz&quot; button on the home page. You&apos;ll need to provide:
               </p>
               <ul className="list-disc pl-8 mb-8 space-y-3 text-lg">
                 <li className="text-gray-300">Team name</li>
@@ -117,7 +117,7 @@ export default function DocsPage() {
             <div className="prose max-w-none">
               <h2 className="text-3xl font-semibold mt-10 mb-6 text-gray-200">How Tournaments Work</h2>
               <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-                Tournaments in BracketWars are structured competitions where teams compete against each other based on their trading performance. Each tournament has a specific timeframe, and teams are matched in brackets.
+                Tournaments in BracketWarz are structured competitions where teams compete against each other based on their trading performance. Each tournament has a specific timeframe, and teams are matched in brackets.
               </p>
               
               <div className="bg-[#1e1e1e] p-6 rounded-lg border border-[#333333] my-8 shadow-sm">
@@ -134,7 +134,7 @@ export default function DocsPage() {
               
               <h2 className="text-3xl font-semibold mt-10 mb-6 text-gray-200">Joining a Tournament</h2>
               <ul className="list-disc pl-8 mb-8 space-y-3 text-lg">
-                <li className="text-gray-300">Each tournament is limited to 8 fully verified BracketWars teams</li>
+                <li className="text-gray-300">Each tournament is limited to 8 fully verified BracketWarz teams</li>
                 <li className="text-gray-300">All team members must accept their invitations before a team can join a tournament</li>
                 <li className="text-gray-300">Teams can register for tournaments through the Events page or directly from tournament announcements</li>
                 <li className="text-gray-300">Teams are accepted on a first-come, first-served basis until the tournament fills up</li>
@@ -149,7 +149,7 @@ export default function DocsPage() {
                   </div>
                   <div>
                     <p className="text-base text-gray-200 font-medium">Important</p>
-                    <p className="text-base text-gray-300">A fully verified BracketWars team means all members have accepted their invitations and the team has a valid Twitter handle and banner image.</p>
+                    <p className="text-base text-gray-300">A fully verified BracketWarz team means all members have accepted their invitations and the team has a valid Twitter handle and banner image.</p>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function DocsPage() {
             <div className="prose max-w-none">
               <h2 className="text-3xl font-semibold mt-10 mb-6 text-gray-200">Cielo Finance API Integration</h2>
               <p className="text-gray-300 mb-6 leading-relaxed text-lg">
-                BracketWars uses the Cielo Finance API to track the trading performance of each team member. This API provides real-time data on:
+                BracketWarz uses the Cielo Finance API to track the trading performance of each team member. This API provides real-time data on:
               </p>
               <ul className="list-disc pl-8 mb-8 space-y-3 text-lg">
                 <li className="text-gray-300">Individual PnL (Profit and Loss)</li>
